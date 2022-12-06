@@ -3,7 +3,7 @@ import { Expose } from 'class-transformer';
 import { IsEmail, IsNotEmpty, MinLength } from 'class-validator';
 
 export class CreateUserDto {
-  @ApiProperty({ default: 'first name' })
+  @ApiProperty()
   @IsNotEmpty()
   @MinLength(3)
   username: string;
