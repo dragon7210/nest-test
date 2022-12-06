@@ -20,12 +20,13 @@ import entities from './typeorm';
         password: configService.get('DB_PASSWORD'),
         database: configService.get('DB_NAME'),
         entities: entities,
-        synchronize: false,
+        synchronize: true,
       }),
       inject: [ConfigService],
     }),
     UsersModule,
   ],
+  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
